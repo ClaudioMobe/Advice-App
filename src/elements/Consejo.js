@@ -20,7 +20,7 @@ const Consejo = () => {
 //Styled
 const Titulo = styled.p`
     color: hsl(150, 100%, 66%);
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     margin: 30px 0;
     font-size: 12px;
 `;
@@ -31,6 +31,10 @@ const Contenido = styled.p`
     font-size: 28px;
     margin-bottom: 30px;
     width: 444px;
+
+    @media (max-width: 430px){
+        width: 295px;    
+    }
 `;
 
 
