@@ -4,19 +4,27 @@ import Consejo from './elements/Consejo';
 import {ReactComponent as IconoDesktop} from './images/pattern-divider-desktop.svg';
 import {ReactComponent as IconoMobile} from './images/pattern-divider-mobile.svg';
 import BtnConsejo from './elements/BtnConsejo';
+import {Helmet} from 'react-helmet';
+import favicon from './images/favicon-32x32.png';
 
 const App = () => {
   return (
-    <Contenedor>
-      <Consejo/>
-      <ContenedorIconoDesktop>
-        <IconoDesktop/>
-      </ContenedorIconoDesktop>
-      <ContenedorIconoMobile>
-        <IconoMobile/>
-      </ContenedorIconoMobile>
-      <BtnConsejo/>
-    </Contenedor>
+    <>
+      <Helmet>
+        <title>Nice Advice :)</title>
+        <link rel="icon" href={favicon} />
+      </Helmet>
+      <Contenedor>
+        <Consejo/>
+        <ContenedorIconoDesktop>
+          <IconoDesktop/>
+        </ContenedorIconoDesktop>
+        <ContenedorIconoMobile>
+          <IconoMobile/>
+        </ContenedorIconoMobile>
+        <BtnConsejo/>
+      </Contenedor>
+    </>
   );
 }
 
